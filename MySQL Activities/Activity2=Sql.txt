@@ -1,0 +1,69 @@
+create table student(
+student_id int primary key,
+name varchar(50),
+age int,
+major varchar(50),
+gpa decimal(10,2),
+enrollment_date date
+);
+
+create table courses (
+course_id int primary key,
+course_name varchar(50),
+credits int
+);
+
+create table enrollment(
+enrollment_id int primary key,
+student_id int,
+course_id int,
+enrollment_date date,
+foreign key(student_id) references student(student_id),
+foreign key(course_id) references courses(course_id)
+);
+
+insert into student (student_id, name, age, major, gpa, enrollment_date)
+VALUES
+(101, 'Alice Johnson', 20, 'Computer Science', 3.8, '2023-01-15'),
+(102, 'Bob Smith', 22, 'Mathematics', 3.4, '2023-03-22'),
+(103, 'Carol Lee', 19, 'Biology', 3.2, '2023-04-10'),
+(104, 'David Brown', 21, 'Physics', 2.9, '2022-11-05'),
+(105, 'Eve Davis', 23, 'Computer Science', 3.6, '2022-08-20'),
+(106, 'Frank Miller', 20, 'Mathematics', 3.1, '2023-02-28');
+
+
+insert into courses (course_id, course_name, credits)
+VALUES
+(201, 'Introduction to Programming', 3),
+(202, 'Calculus I', 4),
+(203, 'Biology 101', 3),
+(204, 'Physics Fundamentals', 4),
+(205, 'Data Structures', 3),
+(206, 'Advanced Mathematics', 3);
+
+
+insert into enrollment (enrollment_id, student_id, course_id, enrollment_date)
+VALUES
+(301, 101, 201, '2023-01-20'),
+(302, 102, 202, '2023-03-25'),
+(303, 103, 203, '2023-04-15'),
+(304, 104, 204, '2022-11-10'),
+(305, 105, 205, '2022-08-25'),
+(306, 106, 202, '2023-03-01');
+
+select s.name as 'Student Name',c.course_name
+from student s
+join enrollment e ON e.student_id = s.student_id
+join courses c ON e.course_id = c.course_id;
+
+
+select c.course_name, count(e.student_id)
+from courses c
+left join enrollment e on c.course_id = e.course_id
+group by c.course_name;
+
+
+select c.course_name, count(e.student_id)
+from courses c
+left join enrollment e on c.course_id = e.course_id
+group by c.course_name having count(e.student_id)>1;

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://cxotoday.com/wp-content/uploads/2023/12/Mindsprint-Logo_Orange-red_RGB.png"
+                    width="200" height="" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="navbar..html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Us -->
+    <div class="container-fluid">
+        <h3 class="text-center p-3 text-bg-secondary">Contact Us</h3>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="image-container">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="banner" height="350px">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer  -->
+    <div class="container-fluid p-5 bg-dark-subtle">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-12 col-md-6 col-lg-3 text-center">
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 text-center">
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 text-center">
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 text-center">
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                    <a href="#" class="d-block p-2 text-decoration-none">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
